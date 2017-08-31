@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "https://github.com/ahnu118/react-native-cookies"
+  s.name         = "react-native-cookies"
   s.version      = "3.2.0"
   s.license      = "MIT"
   s.homepage     = "https://github.com/ahnu118/react-native-cookies"
