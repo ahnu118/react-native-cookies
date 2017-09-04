@@ -4,7 +4,7 @@
 #else
 #import <React/RCTConvert.h>
 #endif
-
+#import "NSString+RNExtend.h"
 @implementation RNCookieManagerIOS
 
 RCT_EXPORT_MODULE()
@@ -66,6 +66,26 @@ RCT_EXPORT_METHOD(getFromResponse:(NSURL *)url
         }
         resolve(dics);
     }];
+}
+
+RCT_EXPORT_METHOD(getRequestURLCookie:(NSURL *) url
+                  resolver:(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject) {
+    
+    NSString *host = url.absoluteString;
+    NSHTTPCookieStorage *sharedHTTPCookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    NSArray *cookies = [sharedHTTPCookieStorage cookiesForURL:[NSURL URLWithString:host]];
+    NSEnumerator *enumerator = [cookies objectEnumerator];
+    NSHTTPCookie *cookie;
+    NSString *k = @"";
+    while (cookie = [enumerator nextObject]) {
+        
+        k = [k stringByAppendingString:[NSString stringWithFormat:@"%@=%@; ",cookie.name,cookie.value]];
+    }
+    
+    NSDictionary *dic = @{@"cookie":NONilParam(k, @"")};
+    NSString *json = [NSString jsonStringWithObject:dic];
+    resolve(json);
 }
 
 RCT_EXPORT_METHOD(get:(NSURL *) url

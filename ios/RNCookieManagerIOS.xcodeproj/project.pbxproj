@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1BD726021CF77DD1005DBD79 /* RNCookieManagerIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD726011CF77DD1005DBD79 /* RNCookieManagerIOS.m */; };
+		DF867E2D1F5D1C870036A421 /* NSString+RNExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = DF867E2C1F5D1C870036A421 /* NSString+RNExtend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,8 @@
 		1BD725DA1CF77A8B005DBD79 /* libRNCookieManagerIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNCookieManagerIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BD726001CF77DD1005DBD79 /* RNCookieManagerIOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCookieManagerIOS.h; sourceTree = "<group>"; };
 		1BD726011CF77DD1005DBD79 /* RNCookieManagerIOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCookieManagerIOS.m; sourceTree = "<group>"; };
+		DF867E2B1F5D1C870036A421 /* NSString+RNExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RNExtend.h"; sourceTree = "<group>"; };
+		DF867E2C1F5D1C870036A421 /* NSString+RNExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RNExtend.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 			children = (
 				1BD726001CF77DD1005DBD79 /* RNCookieManagerIOS.h */,
 				1BD726011CF77DD1005DBD79 /* RNCookieManagerIOS.m */,
+				DF867E2B1F5D1C870036A421 /* NSString+RNExtend.h */,
+				DF867E2C1F5D1C870036A421 /* NSString+RNExtend.m */,
 			);
 			path = RNCookieManagerIOS;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BD726021CF77DD1005DBD79 /* RNCookieManagerIOS.m in Sources */,
+				DF867E2D1F5D1C870036A421 /* NSString+RNExtend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +279,7 @@
 				1BD725E21CF77A8B005DBD79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
