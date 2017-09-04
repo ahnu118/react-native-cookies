@@ -25,7 +25,8 @@ const functions = [
     'get',
     'getAll',
     'clearAll',
-    'clearByName'
+    'clearByName',
+    'getRequestURLCookie'
 ];
 
 module.exports = {}

@@ -5,6 +5,8 @@
 #import <React/RCTConvert.h>
 #endif
 #import "NSString+RNExtend.h"
+#define NONilParam(obj,def) ((obj)!=nil ? (obj) : (def))
+
 @implementation RNCookieManagerIOS
 
 RCT_EXPORT_MODULE()
